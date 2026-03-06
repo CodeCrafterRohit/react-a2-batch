@@ -5,6 +5,18 @@ import FunCompo1 from "./Components/FunCompo1";
 import FunCompo2 from "./Components/FunCompo2";
 import Parent from "./Props/Parent";
 import Component1 from "./Props/Component1";
+import CommonCompo from "./Props/CommonCompo";
+import Layout from "./Props/Layout";
+import Home from "./Props/Home";
+import About from "./Props/About";
+import WithoutState from "./State/WithoutState";
+import WithState from "./State/WithState";
+import CounterWithClass from "./State/CounterWithClass";
+import Counter from "./State/Counter";
+// import UpdatingMultipleStates from "./State/UpdatingMultipleStates";
+import ListRendering from "./ListAndKeys/ListRendering";
+import ProductsRendering from "./ListAndKeys/ProductsRendering";
+import ProductList from "./TaskStatePropsList/ProductList";
 
 const App = () => {
   let username = "Don";
@@ -24,7 +36,19 @@ const App = () => {
       {/* <FunCompo1 />
       <FunCompo2 /> */}
       {/* <Parent /> */}
-      <Component1 />
+      {/* <Component1 /> */}
+      {/* <CommonCompo /> */}
+      {/* <Home />
+      <About /> */}
+      {/* <WithoutState /> */}
+      {/* <WithState /> */}
+      {/* <CounterWithClass />
+      <hr />
+      <Counter /> */}
+      {/* <UpdatingMultipleStates /> */}
+      {/* <ListRendering /> */}
+      {/* <ProductsRendering /> */}
+      <ProductList />
     </React.Fragment>
   );
 };
