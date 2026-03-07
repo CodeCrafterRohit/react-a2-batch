@@ -17,6 +17,14 @@ import Counter from "./State/Counter";
 import ListRendering from "./ListAndKeys/ListRendering";
 import ProductsRendering from "./ListAndKeys/ProductsRendering";
 import ProductList from "./TaskStatePropsList/ProductList";
+import InlineEvent from "./EventHandling/InlineEvent";
+import ExternalEventHandling from "./EventHandling/ExternalEventHandling";
+import EventWithParameter from "./EventHandling/EventWithParameter";
+import ChangeEvent from "./EventHandling/ChangeEvent";
+import SubmitEvent from "./EventHandling/SubmitEvent";
+import IfElseRendering from "./ConditionalRendering/IfElseRendering";
+import TernaryOperator from "./ConditionalRendering/TernaryOperator";
+import ShortCircuit from "./ConditionalRendering/ShortCircuit";
 
 const App = () => {
   let username = "Don";
@@ -48,7 +56,15 @@ const App = () => {
       {/* <UpdatingMultipleStates /> */}
       {/* <ListRendering /> */}
       {/* <ProductsRendering /> */}
-      <ProductList />
+      {/* <ProductList /> */}
+      {/* <InlineEvent /> */}
+      {/* <ExternalEventHandling /> */}
+      {/* <EventWithParameter /> */}
+      {/* <ChangeEvent /> */}
+      {/* <SubmitEvent/> */}
+      {/* <IfElseRendering /> */}
+      {/* <TernaryOperator /> */}
+      <ShortCircuit />
     </React.Fragment>
   );
 };
