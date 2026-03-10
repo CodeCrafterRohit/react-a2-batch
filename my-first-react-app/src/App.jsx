@@ -25,6 +25,8 @@ import SubmitEvent from "./EventHandling/SubmitEvent";
 import IfElseRendering from "./ConditionalRendering/IfElseRendering";
 import TernaryOperator from "./ConditionalRendering/TernaryOperator";
 import ShortCircuit from "./ConditionalRendering/ShortCircuit";
+import FormHandling1 from "./FormHandling/FormHandling1";
+import SingleStateObject from "./FormHandling/SingleStateObject";
 
 const App = () => {
   let username = "Don";
@@ -64,7 +66,9 @@ const App = () => {
       {/* <SubmitEvent/> */}
       {/* <IfElseRendering /> */}
       {/* <TernaryOperator /> */}
-      <ShortCircuit />
+      {/* <ShortCircuit /> */}
+      {/* <FormHandling1 /> */}
+      <SingleStateObject />
     </React.Fragment>
   );
 };
