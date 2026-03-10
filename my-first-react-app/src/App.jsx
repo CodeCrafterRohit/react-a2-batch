@@ -27,6 +27,10 @@ import TernaryOperator from "./ConditionalRendering/TernaryOperator";
 import ShortCircuit from "./ConditionalRendering/ShortCircuit";
 import FormHandling1 from "./FormHandling/FormHandling1";
 import SingleStateObject from "./FormHandling/SingleStateObject";
+import RadioInput from "./FormHandling/RadioInput";
+import CheckboxInput from "./FormHandling/CheckboxInput";
+import SelectDropdown from "./FormHandling/SelectDropdown";
+import DataList from "./FormHandling/DataList";
 
 const App = () => {
   let username = "Don";
@@ -68,7 +72,11 @@ const App = () => {
       {/* <TernaryOperator /> */}
       {/* <ShortCircuit /> */}
       {/* <FormHandling1 /> */}
-      <SingleStateObject />
+      {/* <SingleStateObject /> */}
+      {/* <RadioInput /> */}
+      {/* <CheckboxInput /> */}
+      {/* <SelectDropdown /> */}
+      <DataList />
     </React.Fragment>
   );
 };
