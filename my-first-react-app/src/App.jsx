@@ -31,6 +31,8 @@ import RadioInput from "./FormHandling/RadioInput";
 import CheckboxInput from "./FormHandling/CheckboxInput";
 import SelectDropdown from "./FormHandling/SelectDropdown";
 import DataList from "./FormHandling/DataList";
+import FileUpload from "./FormHandling/FileUpload";
+import FormHandlingTask from "./FormHandling/FormHandlingTask";
 
 const App = () => {
   let username = "Don";
@@ -76,7 +78,9 @@ const App = () => {
       {/* <RadioInput /> */}
       {/* <CheckboxInput /> */}
       {/* <SelectDropdown /> */}
-      <DataList />
+      {/* <DataList /> */}
+      {/* <FileUpload /> */}
+      <FormHandlingTask />
     </React.Fragment>
   );
 };
