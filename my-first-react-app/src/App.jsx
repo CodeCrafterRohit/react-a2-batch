@@ -4,7 +4,7 @@ import Fragment2 from "./ReactFragments/Fragment2";
 import FunCompo1 from "./Components/FunCompo1";
 import FunCompo2 from "./Components/FunCompo2";
 import Parent from "./Props/Parent";
-import Component1 from "./Props/Component1";
+// import Component1 from "./Props/Component1";
 import CommonCompo from "./Props/CommonCompo";
 import Layout from "./Props/Layout";
 import Home from "./Props/Home";
@@ -33,6 +33,17 @@ import SelectDropdown from "./FormHandling/SelectDropdown";
 import DataList from "./FormHandling/DataList";
 import FileUpload from "./FormHandling/FileUpload";
 import FormHandlingTask from "./FormHandling/FormHandlingTask";
+import UncontrolledForm from "./FormHandling/UncontrolledForm";
+import LoginWithUncontrolled from "./FormHandling/LoginWithUncontrolled";
+import InlineStyling from "./StylingReact/InlineStyling";
+import InternalStyling from "./StylingReact/InternalStyling";
+// import ExternalStyling from "./StylingReact/ExternalStyling";
+import Component1 from "./StylingReact/Component1";
+import Component2 from "./StylingReact/Component2";
+import StyledComponents from "./StylingReact/StyledComponents";
+import TailwindCSSSetup from "./StylingReact/TailwindCSSSetup";
+import MaterialUiDemo from "./StylingReact/MaterialUiDemo";
+import LoginWithEmailAndPassword from "./ReactIconsAndNotifications/LoginWithEmailAndPassword";
 
 const App = () => {
   let username = "Don";
@@ -80,7 +91,18 @@ const App = () => {
       {/* <SelectDropdown /> */}
       {/* <DataList /> */}
       {/* <FileUpload /> */}
-      <FormHandlingTask />
+      {/* <FormHandlingTask /> */}
+      {/* <UncontrolledForm /> */}
+      {/* <LoginWithUncontrolled /> */}
+      {/* <InlineStyling />
+      <InternalStyling />
+      <ExternalStyling /> */}
+      {/* <Component1 />
+      <Component2 /> */}
+      {/* <StyledComponents /> */}
+      {/* <TailwindCSSSetup /> */}
+      {/* <MaterialUiDemo /> */}
+      <LoginWithEmailAndPassword />
     </React.Fragment>
   );
 };
