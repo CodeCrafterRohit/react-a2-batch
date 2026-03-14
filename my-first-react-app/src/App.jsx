@@ -44,6 +44,8 @@ import StyledComponents from "./StylingReact/StyledComponents";
 import TailwindCSSSetup from "./StylingReact/TailwindCSSSetup";
 import MaterialUiDemo from "./StylingReact/MaterialUiDemo";
 import LoginWithEmailAndPassword from "./ReactIconsAndNotifications/LoginWithEmailAndPassword";
+import ToggleAndNotify from "./PasswordTask/ToggleAndNotify";
+import TodoApp from "./TodoListTask/TodoApp";
 
 const App = () => {
   let username = "Don";
@@ -102,7 +104,9 @@ const App = () => {
       {/* <StyledComponents /> */}
       {/* <TailwindCSSSetup /> */}
       {/* <MaterialUiDemo /> */}
-      <LoginWithEmailAndPassword />
+      {/* <LoginWithEmailAndPassword /> */}
+      {/* <ToggleAndNotify /> */}
+      <TodoApp />
     </React.Fragment>
   );
 };
