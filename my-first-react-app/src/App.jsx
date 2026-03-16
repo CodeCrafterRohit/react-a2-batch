@@ -46,6 +46,10 @@ import MaterialUiDemo from "./StylingReact/MaterialUiDemo";
 import LoginWithEmailAndPassword from "./ReactIconsAndNotifications/LoginWithEmailAndPassword";
 import ToggleAndNotify from "./PasswordTask/ToggleAndNotify";
 import TodoApp from "./TodoListTask/TodoApp";
+import Grandparent1 from "./ContextAPI/Grandparent1";
+import PropertyProvider from "./ContextAPI/PropertyProvider";
+import Child1 from "./ContextAPI/Child1";
+import GrandChild1 from "./ContextAPI/GrandChild1";
 
 const App = () => {
   let username = "Don";
@@ -106,7 +110,12 @@ const App = () => {
       {/* <MaterialUiDemo /> */}
       {/* <LoginWithEmailAndPassword /> */}
       {/* <ToggleAndNotify /> */}
-      <TodoApp />
+      {/* <TodoApp /> */}
+      {/* <Grandparent1 /> */}
+      <PropertyProvider>
+        <Child1 />
+        <GrandChild1 />
+      </PropertyProvider>
     </React.Fragment>
   );
 };
