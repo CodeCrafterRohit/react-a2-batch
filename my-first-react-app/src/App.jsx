@@ -12,7 +12,7 @@ import About from "./Props/About";
 import WithoutState from "./State/WithoutState";
 import WithState from "./State/WithState";
 import CounterWithClass from "./State/CounterWithClass";
-import Counter from "./State/Counter";
+// import Counter from "./State/Counter";
 // import UpdatingMultipleStates from "./State/UpdatingMultipleStates";
 import ListRendering from "./ListAndKeys/ListRendering";
 import ProductsRendering from "./ListAndKeys/ProductsRendering";
@@ -50,6 +50,14 @@ import Grandparent1 from "./ContextAPI/Grandparent1";
 import PropertyProvider from "./ContextAPI/PropertyProvider";
 import Child1 from "./ContextAPI/Child1";
 import GrandChild1 from "./ContextAPI/GrandChild1";
+import ParentComponent from "./ContextAPIRevision/ParentComponent";
+import ChildComponent from "./ContextAPIRevision/ChildComponent";
+import GrandChildComponent from "./ContextAPIRevision/GrandChildComponent";
+import CounterProvider from "./ContextAPIRevision/CounterProvider";
+import Counter from "./ContextAPIRevision/Counter";
+import DisplayCount from "./ContextAPIRevision/DisplayCount";
+import ThemeProvider from "./ContextAPIRevision/ThemeProvider";
+import HomePage from "./ContextAPIRevision/HomePage";
 
 const App = () => {
   let username = "Don";
@@ -112,10 +120,23 @@ const App = () => {
       {/* <ToggleAndNotify /> */}
       {/* <TodoApp /> */}
       {/* <Grandparent1 /> */}
-      <PropertyProvider>
+      {/* <PropertyProvider>
         <Child1 />
         <GrandChild1 />
-      </PropertyProvider>
+      </PropertyProvider> */}
+
+      {/* <ParentComponent /> */}
+      {/* <ParentComponent>
+        <ChildComponent />
+        <GrandChildComponent />
+      </ParentComponent> */}
+      {/* <CounterProvider>
+        <Counter />
+        <DisplayCount />
+      </CounterProvider> */}
+      <ThemeProvider>
+        <HomePage />
+      </ThemeProvider>
     </React.Fragment>
   );
 };
