@@ -58,6 +58,9 @@ import Counter from "./ContextAPIRevision/Counter";
 import DisplayCount from "./ContextAPIRevision/DisplayCount";
 import ThemeProvider from "./ContextAPIRevision/ThemeProvider";
 import HomePage from "./ContextAPIRevision/HomePage";
+import UseEffect1 from "./UseEffectHook/UseEffect1";
+import UseEffect2 from "./UseEffectHook/UseEffect2";
+import UserFetchTask from "./UseEffectHook/UserFetchTask";
 
 const App = () => {
   let username = "Don";
@@ -134,9 +137,12 @@ const App = () => {
         <Counter />
         <DisplayCount />
       </CounterProvider> */}
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <HomePage />
-      </ThemeProvider>
+      </ThemeProvider> */}
+      {/* <UseEffect1 /> */}
+      {/* <UseEffect2 /> */}
+      <UserFetchTask />
     </React.Fragment>
   );
 };
