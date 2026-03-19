@@ -61,6 +61,7 @@ import HomePage from "./ContextAPIRevision/HomePage";
 import UseEffect1 from "./UseEffectHook/UseEffect1";
 import UseEffect2 from "./UseEffectHook/UseEffect2";
 import UserFetchTask from "./UseEffectHook/UserFetchTask";
+import APIFetchAndSearch from "./FetchAndSearchTask/APIFetchAndSearch";
 
 const App = () => {
   let username = "Don";
@@ -142,7 +143,8 @@ const App = () => {
       </ThemeProvider> */}
       {/* <UseEffect1 /> */}
       {/* <UseEffect2 /> */}
-      <UserFetchTask />
+      {/* <UserFetchTask /> */}
+      <APIFetchAndSearch />
     </React.Fragment>
   );
 };
