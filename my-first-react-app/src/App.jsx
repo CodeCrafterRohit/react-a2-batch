@@ -144,7 +144,7 @@ const App = () => {
       {/* <UseEffect1 /> */}
       {/* <UseEffect2 /> */}
       {/* <UserFetchTask /> */}
-      <APIFetchAndSearch />
+      {/* <APIFetchAndSearch /> */}
     </React.Fragment>
   );
 };
