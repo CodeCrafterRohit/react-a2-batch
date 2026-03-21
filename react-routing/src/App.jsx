@@ -5,11 +5,16 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Layout from "./components/Layout";
+import Dashboard from "./NavLinksComponents/Dashboard";
+import Admin from "./NavLinksComponents/Admin";
+import Settings from "./NavLinksComponents/Settings";
+import UserProfile from "./NavLinksComponents/UserProfile";
+import PageNotFound from "./NavLinksComponents/PageNotFound";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -17,8 +22,20 @@ const App = () => {
             <Route path="/register" element={<Register />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
       {/* <Navbar /> */}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="/admin-dashboard" element={<Admin />} />
+            <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
