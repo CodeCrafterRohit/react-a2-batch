@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -10,6 +10,7 @@ import Admin from "./NavLinksComponents/Admin";
 import Settings from "./NavLinksComponents/Settings";
 import UserProfile from "./NavLinksComponents/UserProfile";
 import PageNotFound from "./NavLinksComponents/PageNotFound";
+import { myRoutes2 } from "./routes/routes";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
       </BrowserRouter> */}
       {/* <Navbar /> */}
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
@@ -35,7 +36,10 @@ const App = () => {
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+      {/* <RouterProvider router={myRoutes} /> */}
+      <RouterProvider router={myRoutes2} />
     </>
   );
 };
