@@ -10,7 +10,7 @@ import Admin from "./NavLinksComponents/Admin";
 import Settings from "./NavLinksComponents/Settings";
 import UserProfile from "./NavLinksComponents/UserProfile";
 import PageNotFound from "./NavLinksComponents/PageNotFound";
-import { myRoutes2 } from "./routes/routes";
+import myRoutes3 from "./routes/routes";
 
 const App = () => {
   return (
@@ -39,7 +39,8 @@ const App = () => {
       </BrowserRouter> */}
 
       {/* <RouterProvider router={myRoutes} /> */}
-      <RouterProvider router={myRoutes2} />
+      {/* <RouterProvider router={myRoutes2} /> */}
+      <RouterProvider router={myRoutes3} />
     </>
   );
 };

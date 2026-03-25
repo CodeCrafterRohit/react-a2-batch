@@ -6,6 +6,10 @@ import Services from "../Rounting2/Services";
 import UserDashboard from "../NestedRouting/UserDashboard";
 import UserProfile from "../NavLinksComponents/UserProfile";
 import UserSettings from "../NestedRouting/UserSettings";
+import DynamicHome from "../DynamicRouting/DynamicHome";
+import DynamicUser from "../DynamicRouting/DynamicUser";
+import DynamicLogin from "../DynamicRouting/DynamicLogin";
+import DynamicRegister from "../DynamicRouting/DynamicRegister";
 
 // let myRoutes = createBrowserRouter([
 //   {
@@ -34,19 +38,46 @@ import UserSettings from "../NestedRouting/UserSettings";
 
 // export default myRoutes;
 
-export let myRoutes2 = createBrowserRouter([
+// export let myRoutes2 = createBrowserRouter([
+//   {
+//     path: "/dashboard",
+//     element: <UserDashboard />,
+//     children: [
+//       {
+//         path: "user-profile",
+//         element: <UserProfile />,
+//       },
+//       {
+//         path: "user-settings",
+//         element: <UserSettings />,
+//       },
+//     ],
+//   },
+// ]);
+
+let myRoutes3 = createBrowserRouter([
   {
-    path: "/dashboard",
-    element: <UserDashboard />,
+    path: "/",
+    element: <Layout2 />,
     children: [
       {
-        path: "user-profile",
-        element: <UserProfile />,
+        index: true,
+        element: <DynamicHome />,
       },
       {
-        path: "user-settings",
-        element: <UserSettings />,
+        path: "/user/:id",
+        element: <DynamicUser />,
+      },
+      {
+        path: "/auth/login",
+        element: <DynamicLogin />,
+      },
+      {
+        path: "/auth/register",
+        element: <DynamicRegister />,
       },
     ],
   },
 ]);
+
+export default myRoutes3;
