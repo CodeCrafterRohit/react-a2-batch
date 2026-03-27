@@ -25,9 +25,9 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `text-lg font-semibold cursor-pointer text-indigo-600 ${isActive ? "underline" : ""}`
               }
-              to={"/users"}
+              to={"/user-form"}
             >
-              Users
+              User Form
             </NavLink>
           </li>
         </ul>
