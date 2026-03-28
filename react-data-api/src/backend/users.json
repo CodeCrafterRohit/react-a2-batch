@@ -1,5 +1,149 @@
 {
-    "users": [
-        
-    ]
+  "users": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": "-POW-1ZDIag"
+    },
+    {
+      "firstName": "Jesse",
+      "lastName": "Camacho",
+      "email": "dypilyt@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "sAAEHn5eDSo"
+    },
+    {
+      "firstName": "Ima",
+      "lastName": "Bowers",
+      "email": "xyrugys@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "k5lPbGFmVJ0"
+    },
+    {
+      "firstName": "Rama",
+      "lastName": "Molina",
+      "email": "malebeda@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "FYLqmyFOK6s"
+    },
+    {
+      "firstName": "Destiny",
+      "lastName": "Montoya",
+      "email": "vakasyl@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "yKQLaRTr2qA"
+    },
+    {
+      "firstName": "Wynter",
+      "lastName": "Roman",
+      "email": "muheraku@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "6_zLNJCKY3o"
+    },
+    {
+      "firstName": "Constance",
+      "lastName": "James",
+      "email": "gupuh@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "1AtZbnM4uKQ"
+    },
+    {
+      "firstName": "Iliana",
+      "lastName": "Peters",
+      "email": "gicuxi@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "PdSqScaMDzs"
+    },
+    {
+      "firstName": "Jamal",
+      "lastName": "Downs",
+      "email": "tutytyhaw@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "N1YLfT1DVbU"
+    },
+    {
+      "firstName": "Hayes",
+      "lastName": "Frazier",
+      "email": "gopigodewy@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "JNAE8erHLKw"
+    },
+    {
+      "firstName": "Maxine",
+      "lastName": "Sharpe",
+      "email": "dynec@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "hCGHD94oVoM"
+    },
+    {
+      "firstName": "Pamela",
+      "lastName": "Vance",
+      "email": "tali@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "ntb5kVVjzxs"
+    },
+    {
+      "firstName": "Griffin",
+      "lastName": "Erickson",
+      "email": "dijazix@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "9lxGzkWHRNs"
+    },
+    {
+      "firstName": "Hilda",
+      "lastName": "Marshall",
+      "email": "bakemohic@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "b29Ac7Rfk7E"
+    },
+    {
+      "firstName": "Roth",
+      "lastName": "Bullock",
+      "email": "nijuz@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "oJWbqqLaGZE"
+    },
+    {
+      "firstName": "Channing",
+      "lastName": "Guzman",
+      "email": "hudywij@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "nIvdZGGz4lI"
+    },
+    {
+      "firstName": "Malcolm",
+      "lastName": "Newton",
+      "email": "sikasud@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "hoWeSWoRzgQ"
+    },
+    {
+      "firstName": "Ciaran",
+      "lastName": "Decker",
+      "email": "qigemoba@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "id": "3W6qjnbuxyo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

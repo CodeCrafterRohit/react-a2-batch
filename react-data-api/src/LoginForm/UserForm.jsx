@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { addUser } from "../api/axiosInstance";
+import { useNavigate } from "react-router-dom";
 
 const UserForm = () => {
+  let navigate = useNavigate();
   //! state for userData
-  let [userData, setUserData] = useState({
+  const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -11,23 +14,29 @@ const UserForm = () => {
     confirmPassword: "",
   });
 
-  let { firstName, lastName, email, password, confirmPassword } = userData;
+  const { firstName, lastName, email, password, confirmPassword } = userData;
 
   //! handleInputChange
-  let handleInputChange = (e) => {
-    let { name, value } = e.target;
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
 
   //! handleSubmit
-  let handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    // CRITICAL: Stop the browser from refreshing immediately
     e.preventDefault();
+
+    // Basic Validation
+    // if (password !== confirmPassword) {
+    //   return toast.error("Passwords do not match!");
+    // }
+
     try {
-      //* logic for adding user
-    } catch (error) {
-      console.log("Error While Adding User:", error);
-      toast.error(error.message);
-    } finally {
+      await addUser(userData);
+      toast.success("User Added Successfully");
+
+      //! clear the form data only on success
       setUserData({
         firstName: "",
         lastName: "",
@@ -35,10 +44,17 @@ const UserForm = () => {
         password: "",
         confirmPassword: "",
       });
+      navigate("/");
+    } catch (error) {
+      console.error("Error While Adding User:", error);
+      // Use optional chaining to catch specific server errors if they exist
+      toast.error(error.response?.data?.message || error.message);
     }
   };
+
   return (
-    <div className="min-h[calc(100% - 80px)] bg-gray-50 flex items-center justify-center p-6">
+    /* Fixed the height utility class syntax */
+    <div className="min-h-[calc(100vh-80px)] bg-gray-50 flex items-center justify-center p-6">
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           User Details Form
@@ -53,6 +69,7 @@ const UserForm = () => {
               <input
                 type="text"
                 name="firstName"
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                 placeholder="John"
                 value={firstName}
@@ -66,6 +83,7 @@ const UserForm = () => {
               <input
                 type="text"
                 name="lastName"
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                 placeholder="Doe"
                 value={lastName}
@@ -81,6 +99,7 @@ const UserForm = () => {
             <input
               type="email"
               name="email"
+              required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
               placeholder="john@example.com"
               value={email}
@@ -95,6 +114,7 @@ const UserForm = () => {
             <input
               type="password"
               name="password"
+              required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
               placeholder="••••••••"
               value={password}
@@ -109,6 +129,7 @@ const UserForm = () => {
             <input
               type="password"
               name="confirmPassword"
+              required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
               placeholder="••••••••"
               value={confirmPassword}
@@ -117,7 +138,10 @@ const UserForm = () => {
           </div>
 
           <div className="pt-4">
-            <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md">
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md active:scale-[0.98]"
+            >
               Add User
             </button>
           </div>
