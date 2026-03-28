@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { addUser } from "../api/axiosInstance";
-import { useNavigate } from "react-router-dom";
+import { addUser, updateUser } from "../api/axiosInstance";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const UserForm = () => {
   let navigate = useNavigate();
+  
+  let location = useLocation();
+  let user = location?.state?.user;
+  console.log(user);
+
   //! state for userData
   const [userData, setUserData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    firstName: user?.firstName || "",
+    lastName: user?.lastName || "",
+    email: user?.email || "",
+    password: user?.password || "",
+    confirmPassword: user?.confirmPassword || "",
   });
 
   const { firstName, lastName, email, password, confirmPassword } = userData;
@@ -33,8 +38,15 @@ const UserForm = () => {
     // }
 
     try {
-      await addUser(userData);
-      toast.success("User Added Successfully");
+      if (user?.id) {
+        //! update user
+        await updateUser(user?.id, userData);
+        toast.success("User Updated Successfully");
+      } else {
+        //! add user
+        await addUser(userData);
+        toast.success("User Added Successfully");
+      }
 
       //! clear the form data only on success
       setUserData({
@@ -142,7 +154,7 @@ const UserForm = () => {
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md active:scale-[0.98]"
             >
-              Add User
+              {user?.id ? "Update User" : "Add User"}
             </button>
           </div>
         </form>

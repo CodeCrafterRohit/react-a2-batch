@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getUsers } from "../api/axiosInstance";
+import { deleteUser, getUsers } from "../api/axiosInstance";
+import { NavLink } from "react-router-dom";
+import { MdDeleteForever } from "react-icons/md";
 
 const Home = () => {
   let [userData, setUserData] = useState([]);
@@ -11,6 +13,11 @@ const Home = () => {
     // console.log(response.data);
     setUserData(response.data);
   };
+
+  let removeUser = async (id) => {
+    await deleteUser(id);
+  };
+
   useEffect(() => {
     fetchAllUsers();
   }, []);
@@ -18,7 +25,7 @@ const Home = () => {
     <div className="min-h-screen bg-slate-50 p-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-indigo-900 mb-8 text-center">
-          Users List
+          Users List <span>({userData.length})</span>
         </h1>
 
         <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -42,9 +49,19 @@ const Home = () => {
                 {user.email}
               </p>
 
-              <div className="mt-4 pt-4 border-t border-slate-50">
-                <button className="text-xs font-medium text-indigo-700 hover:underline">
+              <div className="mt-4 pt-4 border-t border-slate-50 flex justify-between items-center ">
+                <NavLink
+                  to={`/user-details/${user.id}`}
+                  state={{ user }}
+                  className="text-xs font-medium text-indigo-700 hover:underline"
+                >
                   View Profile →
+                </NavLink>
+                <button
+                  onClick={() => removeUser(user?.id)}
+                  className="text-red-500 p-2 rounded-full hover:bg-red-100 cursor-pointer"
+                >
+                  <MdDeleteForever />
                 </button>
               </div>
             </div>

@@ -3,6 +3,7 @@ import Layout from "../pages/Layout";
 import Users from "../components/Users";
 import Home from "../components/Home";
 import UserForm from "../LoginForm/UserForm";
+import UserDetails from "../components/UserDetails";
 
 let myRoutes = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ let myRoutes = createBrowserRouter([
       {
         path: "/user-form",
         element: <UserForm />,
+      },
+      {
+        path: "/user-details/:id",
+        element: <UserDetails />,
       },
     ],
   },
